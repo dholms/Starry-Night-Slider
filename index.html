@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Starry Night</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" type="text/css" href="bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="master.css">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="slickQuiz.css">
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/jmpress.min.js"></script>
+		<script type="text/javascript" src="js/jquery.jmslideshow.js"></script>
+		<script type="text/javascript" src="js/slickQuiz.js"></script>
+		<script type="text/javascript" src="js/slickQuiz-config.js"></script>
+		<noscript>
+			<style>
+			.step {
+				width: 100%;
+				position: relative;
+			}
+			.step:not(.active) {
+				opacity: 1;
+				filter: alpha(opacity=99);
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
+			}
+			.step:not(.active) a.jms-link{
+				opacity: 1;
+				margin-top: 40px;
+			}
+			</style>
+		</noscript>
+    </head>
+    <body>
+        <div class="container">
+			<div id="jms-slideshow" class="jms-slideshow">
+				<div class="step" data-x="-3000">
+					<img src="images/starry_night.jpg">
+					<div class="info" id="title">
+						<h1>Starry Night</h1> <br> <br>
+						<h2>A Painting by</h2> <br>
+						<h2>Vincent Van Gogh</h2>
+					</div>
+				</div>
+				<div class="step" data-x="-1500">
+					<img src="images/vangogh.jpg">
+					<div class="info info-big">
+						<h2>Vincent Van Gogh</h2>
+						<h3>(1853-1890)</h3>
+						<p>Van Gogh created nearly 900 paintings in his time as an artist. Before finding his passion in art, Van Gogh held professions as an art dealer and a clergyman.  Van Gogh was interestingly a predominately self-taught wonder; gaining skills from studying other artists' work for their figures as well as their accurate landscape projections. Van Gogh further expanded his painting abilities in the Netherlands and France, where he experimented with different color and design techniques.</p>
+					</div>
+				</div>
+				<div class="step">
+					<img src="images/starry_night.jpg">
+					<div class="info info-big">
+						<h2>Starry Night</h2>
+						<h3>(1889)</h3>
+						<p>Starry Night is considered to be one of Van Gogh's greatest works as an artist. He painted the piece during his time at Asylum at Saint-Remy where he was in hopes to maintain mental sanity and prevent an emotional breakdown. Today, the piece is constantly being replicated and reprinted, resulting in it becoming one of the most recognizable images throughout the world.</p>
+					</div>
+				</div>
+				<div class="step" data-scale="0.4" data-x="-75">
+					<img src="images/zoom2.jpg">
+					<div class="info">
+						<h2>The Night Sky</h2>
+						<p>The sky itself masterly exaggerates a night scene that everyone is familiar with. Though Van Gogh's paint strokes are short, he uses a fluid motion through his portrayal of the clouds, stars, and moon, which keeps the viewer constantly engaged in the piece as their eyes are consistently following his strokes. </p>
+					</div>
+				</div>
+				<div class="step" data-x="150" data-y="150" data-scale="0.4">
+					<img src="images/zoom3.jpg">
+					<div class="info">
+						<h2>The Town</h2>
+						<p>Beneath the sky and the distant hills lies a small town. The town exudes peace and simplicity. The buildings rest in darkness with a few warm points of light scattered throughout. They are centered around a prominent steeple of the local church. The straight steeple juts of in stark contrast to the brushwork of the hills and sky.</p>
+					</div>
+				</div>
+				<div class="step" data-x="-250" data-y="150" data-scale="0.4">
+					<img src="images/zoom4.jpg">
+					<div class="info info-big">
+						<h2>The Cypress Tree</h2>
+						<p>A cypress tree is typically associated with mourning. In the painting, the tree brashly juts up through the night sky. Where the rest of the painting is warm yellow and cool blue, the cypress stands out with its dark tones and rust highlights. The tree points upwards towards heaven perhaps emphasizing the relative power of nature of the comparably small town.</p>
+					</div>
+				</div>
+				<div class="step" data-x="250" data-y="-175" data-scale="0.4">
+					<img src="images/zoom5.jpg">
+					<div class="info">
+						<h2>The Moon</h2>
+						<p>The most prominent point on the painting rests in the upper-right corner. A bright crescent moon fills the sky with golden light. The moon and its accompanying stars are exaggerated in size. But they are objects that everyone is familiar with, and their almost cartoon size lends a comforting feel to the night sky.</p>
+					</div>
+				</div>
+				<div class="step" >
+					<img src="images/starry_night.jpg">
+					<div class="quiz" id="slickQuiz">
+						<h1>Test Your Knowledge</h1>						
+					        <div class="quizArea">
+					            <div class="quizHeader">	
+					                <a class="button startQuiz" href="#">Get Started!</a>
+					            </div>
+					        </div>
+					        <div class="quizResults">
+					            <h3 class="quizScore">You Scored: <span></span></h3>
+					            <h3 class="quizLevel"><span></span></h3>
+					            <div class="quizResultsCopy">
+					                <!-- where the quiz result copy goes -->
+					            </div>
+					        </div>
+					</div>
+					<script type="text/javascript">
+						$(function () {
+						    $('#slickQuiz').slickQuiz();
+						});
+					</script>
+				</div>
+			</div>
+        </div>
+		<script type="text/javascript">
+			$(function() {
+			
+				$( '#jms-slideshow' ).jmslideshow();
+				
+			});
+		</script>
+    </body>
+</html>
