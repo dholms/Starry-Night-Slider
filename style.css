@@ -8,10 +8,6 @@ a{
 	text-decoration: underline;
 }
 
-a:hover{
-	color: #45b8e1;
-}
-
 h1 {
 	font-size: 36pt;
 	width: auto;
@@ -26,7 +22,7 @@ p {
 	position: relative;
 	z-index: 1000;
     background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     width: 30%;
     float: right;
     height: 50%;
@@ -72,7 +68,7 @@ p {
 }
 .jms-wrapper {
 	min-width: 600px;
-	height: 650px;
+	height: 625px;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
 	/*-webkit-background-clip: padding;
 	-moz-background-clip: padding;     
@@ -92,7 +88,6 @@ p {
 	width: 900px;
     height: 563px;
 	display: block;
-	margin-top: ;
 	-webkit-transition: opacity 1s;
 	-moz-transition: opacity 1s;
 	-ms-transition: opacity 1s;

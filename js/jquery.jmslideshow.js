@@ -32,7 +32,7 @@
 		// shows/hides navigation arrows
 		arrows		: true,
 		// shows/hides navigation dots/pages
-		dots		: true,
+		dots		: false,
 		// each step's bgcolor transition speed
 		bgColorSpeed: '1s',
 		// slideshow on / off
@@ -48,6 +48,10 @@
 			
 			// each one of the slides
 			this.$slides		= $('#jms-slideshow').children('div');
+
+			// total number of substeps
+			this.$substeps = $('#jms-slideshow').children('div.substep');
+
 			// total number of slides
 			this.slidesCount	= this.$slides.length;
 			// step's bgcolor
@@ -223,25 +227,41 @@
 		_loadEvents			: function() {
 			
 			var _self = this;
+
+			
 			
 			// navigation arrows
 			if( this.$arrowPrev && this.$arrowNext ) {
+
+				var substepTime;
 			
 				this.$arrowPrev.on( 'click.jmslideshow', function( event ) {
 					
+					clearTimeout(substepTime);
+
 					_self._stopSlideshow();
 				
 					_self.$jmsWrapper.jmpress( 'prev' );
+
+					if(_self.$jmsWrapper.jmpress('active').hasClass('substep')){
+						substepTime = setTimeout(function(){_self.$jmsWrapper.jmpress( 'prev' );},1750);						
+					}
 
 					return false;
 				
 				} );
 				
 				this.$arrowNext.on( 'click.jmslideshow', function( event ) {
+
+					clearTimeout(substepTime);
 					
 					_self._stopSlideshow();
 					
 					_self.$jmsWrapper.jmpress( 'next' );
+
+					if(_self.$jmsWrapper.jmpress('active').hasClass('substep')){
+						substepTime = setTimeout(function(){_self.$jmsWrapper.jmpress( 'next' );},1750);						
+					}
 					
 					return false;
 				
@@ -273,6 +293,7 @@
 			} );
 			
 		}
+
 	};
 	
 	var logError 			= function( message ) {

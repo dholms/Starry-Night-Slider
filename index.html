@@ -4,7 +4,7 @@
         <title>Starry Night</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="stylesheet" type="text/css" href="bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="master.css">
+        <link rel="stylesheet" type="text/css" href="slickQuizStyle.css">
         <link rel="stylesheet" type="text/css" href="style.css" />
         <link rel="stylesheet" type="text/css" href="slickQuiz.css">
 		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -33,7 +33,7 @@
     <body>
         <div class="container">
 			<div id="jms-slideshow" class="jms-slideshow">
-				<div class="step" data-x="-3000">
+				<div class="step">
 					<img src="images/starry_night.jpg">
 					<div class="info" id="title">
 						<h1>Starry Night</h1> <br> <br>
@@ -41,7 +41,7 @@
 						<h2>Vincent Van Gogh</h2>
 					</div>
 				</div>
-				<div class="step" data-x="-1500">
+				<div class="step" data-z="500">
 					<img src="images/vangogh.jpg">
 					<div class="info info-big">
 						<h2>Vincent Van Gogh</h2>
@@ -64,6 +64,9 @@
 						<p>The sky itself masterly exaggerates a night scene that everyone is familiar with. Though Van Gogh's paint strokes are short, he uses a fluid motion through his portrayal of the clouds, stars, and moon, which keeps the viewer constantly engaged in the piece as their eyes are consistently following his strokes. </p>
 					</div>
 				</div>
+				<div class="step substep">
+					<img src="images/starry_night.jpg">
+				</div>
 				<div class="step" data-x="150" data-y="150" data-scale="0.4">
 					<img src="images/zoom3.jpg">
 					<div class="info">
@@ -71,12 +74,18 @@
 						<p>Beneath the sky and the distant hills lies a small town. The town exudes peace and simplicity. The buildings rest in darkness with a few warm points of light scattered throughout. They are centered around a prominent steeple of the local church. The straight steeple juts of in stark contrast to the brushwork of the hills and sky.</p>
 					</div>
 				</div>
+				<div class="step substep">
+					<img src="images/starry_night.jpg">
+				</div>
 				<div class="step" data-x="-250" data-y="150" data-scale="0.4">
 					<img src="images/zoom4.jpg">
 					<div class="info info-big">
 						<h2>The Cypress Tree</h2>
-						<p>A cypress tree is typically associated with mourning. In the painting, the tree brashly juts up through the night sky. Where the rest of the painting is warm yellow and cool blue, the cypress stands out with its dark tones and rust highlights. The tree points upwards towards heaven perhaps emphasizing the relative power of nature of the comparably small town.</p>
+						<p>A cypress tree is typically associated with mourning. In the painting, the tree brashly juts up through the night sky. Where the rest of the painting is warm yellow and cool blue, the cypress stands out with its dark tones and rust highlights. The tree points upwards towards heaven perhaps emphasizing the relative power of nature in relation to the comparably small town.</p>
 					</div>
+				</div>
+				<div class="step substep">
+					<img src="images/starry_night.jpg">
 				</div>
 				<div class="step" data-x="250" data-y="-175" data-scale="0.4">
 					<img src="images/zoom5.jpg">
@@ -111,10 +120,8 @@
 			</div>
         </div>
 		<script type="text/javascript">
-			$(function() {
-			
-				$( '#jms-slideshow' ).jmslideshow();
-				
+			$(function() {			
+				$( '#jms-slideshow' ).jmslideshow();				
 			});
 		</script>
     </body>
