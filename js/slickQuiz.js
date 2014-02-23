@@ -11,6 +11,7 @@
 
 (function($){
     $.slickQuiz = function(element, options) {
+
         var $element = $(element),
              element = element;
 
@@ -400,7 +401,6 @@
             // Setup quiz
             plugin.method.setupQuiz();
             plugin.method.startQuiz(this);
-
 
             // Bind "submit answer" button
             $(triggers.checker).on('click', function(e) {
